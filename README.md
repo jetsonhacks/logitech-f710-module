@@ -34,6 +34,11 @@ $ jstest /dev/input/js0
 ```
 
 ## Notes
+###
+### Release v1.1.1
+* February, 2021
+* JetPack 4.5.1 - L4T 32.5.1
+
 ### Release v1.1
 * February, 2021
 * JetPack 4.5 - L4T 32.5.0
