@@ -4,7 +4,7 @@
 # We want to check if this is on the eMMC/SD Card (boot device) or if the rootfs has been
 # pivoted
 ROOT_DEVICE=$( findmnt -n -o SOURCE --target / )
-echo "Root device: $ROOT_DEVICE"
+echo "Installing on root device: $ROOT_DEVICE"
 
 # Read version
 JETSON_L4T_STRING=$(dpkg-query --showformat='${Version}' --show nvidia-l4t-core)
