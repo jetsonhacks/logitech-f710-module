@@ -1,7 +1,7 @@
 # logitech-f710-module
 Support for Logitech F710 game controller on NVIDIA Jetson Xavier NX and Jetson AGX Xavier Developer Kits.
 
-Installs hid-logitech module with F710 game controller enabled. The module uses the local name 4.9.201-tegra which is the default image local name.
+Installs hid-logitech module with F710 game controller enabled. The module uses the local name 4.9.253-tegra which is the default image local name.
 
 The repository also provides an outline script to generate the module from the kernel sources.
 
@@ -39,19 +39,23 @@ You will need to download the BSP source and expand it properly if you are going
 ###
 ### Release v1.2
 * September, 2021
+* Tag: l4t-32-6-1
 * JetPack 4.6 - L4T 32.6.1
 * Installer now has message about location of where the module is being installed
 
 ### Release v1.1.1
 * February, 2021
+* Tag: l4t-32-5-1
 * JetPack 4.5.1 - L4T 32.5.1
 
 ### Release v1.1
 * February, 2021
+* Tag: l4t-32-5-0
 * JetPack 4.5 - L4T 32.5.0
 
 ### Release v1.0
 * July 2020
+* Tag: l4t-32-4-3
 * JetPack 4.4 - L4T 32.4.3
 * Initial Release
 ### Release v0.5
