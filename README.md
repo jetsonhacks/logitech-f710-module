@@ -34,7 +34,14 @@ $ jstest /dev/input/js0
 ```
 
 ## Notes
+You will need to download the BSP source and expand it properly if you are going to build the module from source. There are convenience scripts in this account to help with that, depending on which Jetson you are using. 
+
 ###
+### Release v1.2
+* September, 2021
+* JetPack 4.6 - L4T 32.6.1
+* Installer now has message about location of where the module is being installed
+
 ### Release v1.1.1
 * February, 2021
 * JetPack 4.5.1 - L4T 32.5.1
