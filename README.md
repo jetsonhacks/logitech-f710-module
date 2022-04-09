@@ -19,7 +19,7 @@ This is the outline script to build the Logitech kernel module. The script expec
 ```
 This script is provided as an example on how to turn on the LOGITECH_FF module on and build the module.
 
-After the build, the module will be in /usr/src/kernel/kernel-4.9/drivers/hid/hid-logitech.ko
+After the build, the module will be in the source tree. For example, if the $KERNEL_RELEASE is kernel-4.9 : /usr/src/kernel/kernel-4.9/drivers/hid/hid-logitech.ko
 
 
 ## Testing
