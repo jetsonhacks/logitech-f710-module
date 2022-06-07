@@ -37,6 +37,11 @@ $ jstest /dev/input/js0
 You will need to download the BSP source and expand it properly if you are going to build the module from source. There are convenience scripts in this account to help with that, depending on which Jetson you are using. 
 
 ###
+### Release v1.4
+* June, 2022
+* Tag: l4t-32-7-2
+* Add support for L4T 32.7.2
+
 ### Release v1.3
 * April, 2022
 * Tag: l4t-34-1-0
