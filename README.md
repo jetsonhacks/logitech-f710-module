@@ -15,6 +15,8 @@ After installation, cold boot the machine.
 ### build-module
 This is the outline script to build the Logitech kernel module. The script expects kernel sources to be in /usr/src
 ```
+# For Kernel 5.X (Ubuntu 20+) you need to install libssl-dev
+sudo apt install libssl-dev
 ./build-module.sh
 ```
 This script is provided as an example on how to turn on the LOGITECH_FF module on and build the module.
@@ -37,6 +39,11 @@ $ jstest /dev/input/js0
 You will need to download the BSP source and expand it properly if you are going to build the module from source. There are convenience scripts in this account to help with that, depending on which Jetson you are using. 
 
 ###
+### Release v1.5
+* December, 2022
+* Tag: l4t-35.1.0
+* Add support for L4T 32.7.3, L4T 35.1.0
+
 ### Release v1.4
 * June, 2022
 * Tag: l4t-32-7-2
