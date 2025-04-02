@@ -1,3 +1,15 @@
+# Install for JetPack 6.2
+A Linux kernel Image is provided here for the Jetson Orin Nano/Super. The version of the kernel is 5.15.148-tegra. You can check your version with:
+```bash
+uname -r
+```
+This is an unmodified, default kernel Image. If you have modified your kernel Image, do not use this method. This method sets the kernel feature:
+```
+LOGITECH_FF = Y
+```
+If you have modified your kernel, you may want to incorporate the flag to support the Logitech F710 in Direct mode.
+
+
 # Installing a Custom Linux Kernel on Jetson Devices
 
 This guide walks you through installing a new Linux kernel on your NVIDIA Jetson device. You will replace the current kernel with the new one provided in this directory and configure the system to allow easy fallback to the original kernel in case something goes wrong.
@@ -8,7 +20,6 @@ This guide walks you through installing a new Linux kernel on your NVIDIA Jetson
 
 - You are in the directory containing a new `Image` file (the custom kernel).
 - You have root/sudo access to your Jetson device.
-- Your system uses `extlinux` as the bootloader (default for most Jetson devices).
 
 ---
 
@@ -45,7 +56,7 @@ The `extlinux.conf` file controls boot options. To enable booting the original (
 Edit the file:
 
 ```bash
-sudo nano /boot/extlinux/extlinux.conf
+sudo gedit /boot/extlinux/extlinux.conf
 ```
 
 Find the section near the bottom that looks like this:
@@ -58,7 +69,7 @@ Find the section near the bottom that looks like this:
 #    APPEND ${cbootargs}
 ```
 
-Uncomment it **and replace** the `APPEND` line with the one used in the `primary` kernel section (the one currently in use). It should look like this:
+Uncomment it **and replace** the `APPEND` line with the one used in the `primary` kernel section (the one currently in use). Here's an example:
 
 ```ini
 LABEL backup
@@ -96,7 +107,7 @@ If anything goes wrong, you can select the **"backup kernel"** from the boot men
 
 ## 🛡️ Troubleshooting
 
-- If the system fails to boot, hold down the recovery button or access boot options on startup to select the backup kernel.
+- If the system fails to boot, select the backup version in the NVIDIA splash screen.
 - You can also restore the original kernel by copying `Image.backup` back to `Image`:
 
 ```bash
