@@ -69,7 +69,7 @@ Find the section near the bottom that looks like this:
 #    APPEND ${cbootargs}
 ```
 
-Uncomment it **and replace** the `APPEND` line with the one used in the `primary` kernel section (the one currently in use). Here's an example:
+Uncomment it **and replace** the `APPEND` line with the one used in the `primary` kernel section (the one currently in use). **<I>WARNING: DO NOT USE THE EXAMPLE DIRECTLY, USE THE ACTUAL APPEND LINE IN YOUR extlinux.conf FILE.</I>** Here's an example:
 
 ```ini
 LABEL backup
