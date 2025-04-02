@@ -1,6 +1,6 @@
 # logitech-f710-module
 
-Support for the Logitech F710 game controller on NVIDIA Jetson Developer Kits.
+Support for the Logitech F710 game controller on NVIDIA Jetson Developer Kits. This enables the Logitech F710 to operate in Direct Input mode (selector D on the back of the controller).
 
 > **JetPack 6 Note:**  
 > Starting with JetPack 6, the Logitech F710 support must be built directly into the kernel (`LOGITECH_FF` must be enabled as a built-in feature). This means the module (`hid-logitech.ko`) cannot be installed as a separate external module as with previous releases.  
