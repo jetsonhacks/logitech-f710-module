@@ -3,11 +3,14 @@ A Linux kernel Image is provided here for the Jetson Orin Nano/Super. The versio
 ```bash
 uname -r
 ```
-This is an unmodified, default kernel Image. If you have modified your kernel Image, do not use this method. This method sets the kernel feature:
+This is an unmodified, default kernel Image. If you have modified your kernel Image, do not use this method. This method sets the kernel features:
 ```
 LOGITECH_FF = Y
+INPUT_JOYSTICK = Y
+JOYSTICK_XPAD = Y
+JOYSTICK_XPAD_FF = Y
 ```
-If you have modified your kernel, you may want to incorporate the flag to support the Logitech F710 in Direct mode.
+If you have modified your kernel, you may want to incorporate these flags to support the Logitech F710 in DirectInput and XInput modes.
 
 
 # Installing a Custom Linux Kernel on Jetson Devices

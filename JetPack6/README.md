@@ -6,9 +6,10 @@ JetPack 6 introduces changes to how kernel modules are handled on NVIDIA Jetson 
 
 ## 🧠 Key Information
 
-- The `LOGITECH_FF` kernel configuration option must be set to `Y` (built-in) rather than `M` (module).
+- The `LOGITECH_FF` kernel configuration option must be set to `Y` (built-in) rather than `M` (module) for Direct Input support.
+- For XInput support, the following three flags must be set to 'Y': INPUT_JOYSTICK, JOYSTICK_XPAD and JOYSTICK_XPAD_FF. 
 - This change means the Logitech F710 cannot be enabled using a standalone `.ko` file as in JetPack 5 and earlier.
-- This directory includes installation instructions and prebuilt kernel `Image` files for supported JetPack 6 releases (e.g. JetPack 6.2).
+- This directory includes installation instructions and prebuilt kernel `Image` files for supported JetPack 6 releases (e.g. JetPack 6.2). Note that if you are using an Image that has been modified from default, you will need to incorporate these changes yourself.
 
 ---
 
@@ -26,9 +27,12 @@ If your release is not listed, you can build your own image using the [`jetson-l
 
 1. Clone the tools from [jetsonhacks/jetson-linux-build](https://github.com/jetsonhacks/jetson-linux-build)
 2. Download the kernel sources for your Jetson device.
-3. Set the kernel configuration option:
+3. Set the kernel configuration options:
    ```
-   CONFIG_LOGITECH_FF=y
+    LOGITECH_FF = Y
+    INPUT_JOYSTICK = Y
+    JOYSTICK_XPAD = Y
+    JOYSTICK_XPAD_FF = Y
    ```
 4. Build the kernel and generate a new `Image` file.
 
